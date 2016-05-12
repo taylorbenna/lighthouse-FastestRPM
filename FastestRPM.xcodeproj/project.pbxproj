@@ -13,6 +13,8 @@
 		34482D1D1CE52D6F000444BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34482D1B1CE52D6F000444BB /* Main.storyboard */; };
 		34482D1F1CE52D6F000444BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34482D1E1CE52D6F000444BB /* Assets.xcassets */; };
 		34482D221CE52D6F000444BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34482D201CE52D6F000444BB /* LaunchScreen.storyboard */; };
+		34482D2D1CE53068000444BB /* needle.png in Resources */ = {isa = PBXBuildFile; fileRef = 34482D2B1CE53068000444BB /* needle.png */; };
+		34482D2E1CE53068000444BB /* speedometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 34482D2C1CE53068000444BB /* speedometer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		34482D1E1CE52D6F000444BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34482D211CE52D6F000444BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34482D231CE52D6F000444BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34482D2B1CE53068000444BB /* needle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = needle.png; path = Images/needle.png; sourceTree = SOURCE_ROOT; };
+		34482D2C1CE53068000444BB /* speedometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speedometer.png; path = Images/speedometer.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				34482D191CE52D6F000444BB /* ViewController.m */,
 				34482D1B1CE52D6F000444BB /* Main.storyboard */,
 				34482D1E1CE52D6F000444BB /* Assets.xcassets */,
+				34482D2B1CE53068000444BB /* needle.png */,
+				34482D2C1CE53068000444BB /* speedometer.png */,
 				34482D201CE52D6F000444BB /* LaunchScreen.storyboard */,
 				34482D231CE52D6F000444BB /* Info.plist */,
 				34482D121CE52D6F000444BB /* Supporting Files */,
@@ -110,6 +116,7 @@
 				TargetAttributes = {
 					34482D0E1CE52D6F000444BB = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = F9TL8X93F7;
 					};
 				};
 			};
@@ -138,7 +145,9 @@
 			files = (
 				34482D221CE52D6F000444BB /* LaunchScreen.storyboard in Resources */,
 				34482D1F1CE52D6F000444BB /* Assets.xcassets in Resources */,
+				34482D2D1CE53068000444BB /* needle.png in Resources */,
 				34482D1D1CE52D6F000444BB /* Main.storyboard in Resources */,
+				34482D2E1CE53068000444BB /* speedometer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FastestRPM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Taylor.FastestRPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FastestRPM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Taylor.FastestRPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

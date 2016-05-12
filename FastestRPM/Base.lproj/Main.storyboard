@@ -16,11 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speedometer.png" translatesAutoresizingMaskIntoConstraints="NO" id="5mK-IM-ceC">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="jAP-c8-flf">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5dr-Cx-Ps7"/>
+                                    <constraint firstAttribute="width" constant="300" id="VqB-sZ-qjf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velocity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da3-K6-8ou">
+                                <rect key="frame" x="200" y="40" width="200" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="P1P-vL-x7o"/>
+                                    <constraint firstAttribute="width" constant="200" id="mCe-BG-DMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="da3-K6-8ou" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="3Nx-vQ-wq2"/>
+                            <constraint firstItem="jAP-c8-flf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8yv-XC-8kS"/>
+                            <constraint firstItem="5mK-IM-ceC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MJ8-YQ-fYN"/>
+                            <constraint firstItem="5mK-IM-ceC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fW6-5p-3tC"/>
+                            <constraint firstItem="da3-K6-8ou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p8g-Ka-YLU"/>
+                            <constraint firstItem="jAP-c8-flf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t5G-aT-zk3"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Vlx-jq-RKi" appends="YES" id="aFt-E0-7sp"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="needle" destination="jAP-c8-flf" id="rQY-u9-aAl"/>
+                        <outlet property="velocityLabel" destination="da3-K6-8ou" id="vtX-ib-g66"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="Vlx-jq-RKi">
+                    <connections>
+                        <action selector="panGestureStart:" destination="BYZ-38-t0r" id="DpX-81-yFs"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="needle.png" width="400" height="400"/>
+        <image name="speedometer.png" width="300" height="300"/>
+    </resources>
 </document>
